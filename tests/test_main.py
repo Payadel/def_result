@@ -1,6 +1,6 @@
 import unittest
 
-from release.package_name.main import say_hello
+from def_result.main import say_hello
 
 
 class TestMain(unittest.TestCase):

@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "package-name"
-version = "0.1.0"
+name = "def_result"
+version = "0.0.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Payadel <payadelteam@gmail.com>"]
 license = "GPLV3"
 readme = "README.md"
-packages = [{ include = "package_name" }]
+packages = [{ include = "def_result" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -21,7 +21,7 @@ tox = "^4.4.7"
 tox-gh-actions = "^3.1.0"
 
 [tool.poetry.scripts]
-my-script = "package_name.main:say_hello"
+my-script = "def_result.main:say_hello"
 
 [build-system]
 requires = ["poetry-core"]
