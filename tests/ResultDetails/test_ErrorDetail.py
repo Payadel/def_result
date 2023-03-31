@@ -32,10 +32,17 @@ class TestErrorDetail(unittest.TestCase):
     def test_str(self):
         error_detail = ErrorDetail(title="title", message="message", code=100, errors={"message": "error"},
                                    exception=Exception("Fake exception"), more_data=["more_data"])
-
-        print(str(error_detail))
         self.assertTrue(str(error_detail).startswith(
             "Title: title\nMessage: message\nCode: 100\nErrors: {'message': 'error'}\nException: Fake exception"))
+
+        error_detail = ErrorDetail(title="title", message="message", code=100,
+                                   exception=Exception("Fake exception"), more_data=["more_data"])
+        self.assertTrue(str(error_detail).startswith(
+            "Title: title\nMessage: message\nCode: 100\nException: Fake exception"))
+
+        error_detail = ErrorDetail(title="title", message="message", code=100, more_data=["more_data"])
+        self.assertTrue(str(error_detail).startswith(
+            "Title: title\nMessage: message\nCode: 100"))
 
 
 if __name__ == '__main__':

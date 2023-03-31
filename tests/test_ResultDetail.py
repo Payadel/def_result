@@ -16,6 +16,10 @@ class TestResultDetail(unittest.TestCase):
         assert_result_detail(test_class=self, result_detail=result_detail, title='title', message='message', code=100,
                              more_data=["more data"])
 
+    def test_init_without_required_args(self):
+        self.assertRaises(ValueError, ResultDetail, title=None)
+        self.assertRaises(ValueError, ResultDetail, title='')
+
     def test_is_instance_of(self):
         test_detail = FakeDetail("title")
 
@@ -28,6 +32,12 @@ class TestResultDetail(unittest.TestCase):
 
         result_detail.add_more_data("more data")
         self.assertEqual(["more data"], result_detail.more_data)
+
+    def test_add_more_data_with_none(self):
+        result_detail = ResultDetail(title='title')
+
+        result_detail.add_more_data(None)
+        self.assertEqual([], result_detail.more_data)
 
     def test_str_without_args(self):
         result_detail = ResultDetail(title='title')
