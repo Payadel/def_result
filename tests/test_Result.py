@@ -2,90 +2,82 @@ import unittest
 
 from def_result.Result import Result
 from def_result.ResultDetail import ResultDetail
+from tests.helpers import assert_result
 
 
 class TestResult(unittest.TestCase):
     def test_init_without_optional_args(self):
         result = Result(True)
 
-        self.assertTrue(result.success)
-        self.assertIsNone(result.detail)
-        self.assertIsNone(result.value)
+        assert_result(self, result=result, success=True)
 
     def test_init_with_optional_args(self):
+        detail = ResultDetail(title="test")
         value = 123
-        result = Result(success=True, detail=ResultDetail(title="test"), value=value)
+        result = Result(success=True, detail=detail, value=value)
 
-        self.assertTrue(result.success)
-        self.assertTrue(isinstance(result.detail, ResultDetail))
-        self.assertEqual(result.value, value)
+        assert_result(self, result=result, success=True, detail=detail, value=value)
 
     def test_ok_without_optional_args(self):
         result = Result.ok()
 
-        self.assertTrue(result.success)
-        self.assertIsNone(result.detail)
-        self.assertIsNone(result.value)
+        assert_result(self, result=result, success=True)
 
     def test_ok_with_optional_args(self):
         value = 123
-        result = Result.ok(detail=ResultDetail(title="test"), value=value)
+        detail = ResultDetail(title="test")
+        result = Result.ok(detail=detail, value=value)
 
-        self.assertTrue(result.success)
-        self.assertTrue(isinstance(result.detail, ResultDetail))
-        self.assertEqual(result.value, value)
+        assert_result(self, result=result, success=True, detail=detail, value=value)
 
     def test_fail_without_optional_args(self):
         result = Result.fail()
 
-        self.assertFalse(result.success)
-        self.assertIsNone(result.detail)
-        self.assertIsNone(result.value)
+        assert_result(self, result=result, success=False)
 
     def test_fail_with_optional_args(self):
-        result = Result.fail(detail=ResultDetail(title="test"))
+        detail = ResultDetail(title="test")
+        result = Result.fail(detail=detail)
 
-        self.assertFalse(result.success)
-        self.assertTrue(isinstance(result.detail, ResultDetail))
-        self.assertIsNone(result.value)
+        assert_result(self, result=result, success=False, detail=detail)
 
     def test_code_without_detail_and_without_args(self):
         # Success
         result = Result.ok()
-        self.assertEqual(result.code(), 200)
+        self.assertEqual(200, result.code())
 
         # Fail
         result = Result.fail()
-        self.assertEqual(result.code(), 500)
+        self.assertEqual(500, result.code())
 
     def test_code_without_detail_and_with_args(self):
         # Success
         result = Result.ok()
-        self.assertEqual(result.code(default_success_code=0, default_error_code=1), 0)
+        self.assertEqual(0, result.code(default_success_code=0, default_error_code=1))
 
         # Fail
         result = Result.fail()
-        self.assertEqual(result.code(default_success_code=0, default_error_code=1), 1)
+        self.assertEqual(1, result.code(default_success_code=0, default_error_code=1))
 
     def test_code_with_detail_and_without_args(self):
         detail = ResultDetail(title="test", code=100)
         # Success
         result = Result.ok(detail=detail)
-        self.assertEqual(result.code(), 100)
+        self.assertEqual(100, result.code())
 
         # Fail
         result = Result.fail(detail=detail)
-        self.assertEqual(result.code(), 100)
+        self.assertEqual(100, result.code())
 
     def test_code_with_detail_and_with_args(self):
         detail = ResultDetail(title="test", code=100)
         # Success
         result = Result.ok(detail=detail)
-        self.assertEqual(result.code(default_success_code=0, default_error_code=1), 100)
+        self.assertEqual(100, result.code(default_success_code=0, default_error_code=1))
 
         # Fail
         result = Result.fail(detail=detail)
-        self.assertEqual(result.code(default_success_code=0, default_error_code=1), 100)
+        self.assertEqual(100, result.code(default_success_code=0, default_error_code=1))
 
 
 if __name__ == "__main__":
