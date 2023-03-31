@@ -5,11 +5,15 @@ from tests.helpers import assert_error_detail
 
 
 class TestExceptionError(unittest.TestCase):
-    def test_init_without_args(self):
-        detail = ExceptionError()
+    def test_init_without_optional_args(self):
+        exception = Exception("fake")
+        detail = ExceptionError(exception=exception)
 
         assert_error_detail(test_class=self, error_detail=detail, title="An exception occurred",
-                            code=500)
+                            code=500, exception=exception)
+
+    def test_init_required_args(self):
+        self.assertRaises(ValueError, ExceptionError, exception=None)
 
     def test_init_with_args(self):
         exception = Exception("fake")
