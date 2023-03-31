@@ -2,6 +2,10 @@ name: Publish to Test.PyPI
 
 on:
   workflow_dispatch:
+    version:
+      required: false
+      default: ''
+      description: "poetry version"
 
 jobs:
   build-and-publish:
@@ -16,6 +20,10 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v3
 
+      - name: Print Inputs
+        run: |
+          echo "poetry version ${{ inputs.version }}"
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -26,12 +34,17 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install poetry
 
+      - name: Update poetry version
+        run: |
+          poetry version ${{ inputs.version }}
+        if: ${{ inputs.version != '' }}
+
       - name: Configure poetry
         env:
           pypi_token: ${{ secrets.TEST_PYPI_TOKEN }}
         run: |
           poetry config repositories.testpypi https://test.pypi.org/legacy/
-          poetry config http-basic.testpypi __token__ $TEST_PYPI_TOKEN
+          poetry config http-basic.testpypi __token__ $pypi_token
 
       - name: Build and publish
         run: |
