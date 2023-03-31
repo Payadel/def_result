@@ -16,6 +16,8 @@ def def_result(func):
     def wrapper(*args, **kwargs):
         try:
             result_value = func(*args, **kwargs)
+            if isinstance(result_value, Result):
+                return result_value
             result = Result.ok(value=result_value)
         except Exception as e:
             result = Result.fail(detail=ExceptionError(message=str(e), exception=e))
