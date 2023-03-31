@@ -1,6 +1,7 @@
 import unittest
 
 from def_result.ResultDetail import ResultDetail
+from tests.helpers import assert_more_data
 
 
 class TestResultDetail(unittest.TestCase):
@@ -11,8 +12,8 @@ class TestResultDetail(unittest.TestCase):
         self.assertEqual(result_detail.title, title)
         self.assertIsNone(result_detail.message)
         self.assertIsNone(result_detail.code)
-        self.assertIsNotNone(result_detail.more_data)
-        self.assertEqual(len(result_detail.more_data), 0)
+
+        assert_more_data(self, result_detail, [])
 
     def test_init_with_optional_args(self):
         result_detail = ResultDetail(title='title', message='message', code=100, more_data=["more data"])
@@ -21,9 +22,7 @@ class TestResultDetail(unittest.TestCase):
         self.assertEqual(result_detail.message, 'message')
         self.assertEqual(result_detail.code, 100)
 
-        self.assertIsNotNone(result_detail.more_data)
-        self.assertEqual(len(result_detail.more_data), 1)
-        self.assertEqual(result_detail.more_data[0], "more data")
+        assert_more_data(self, result_detail, ["more data"])
 
     def test_is_instance_of(self):
         test_detail = FakeDetail("title")
@@ -37,9 +36,7 @@ class TestResultDetail(unittest.TestCase):
 
         result_detail.add_more_data("more data")
 
-        self.assertIsNotNone(result_detail.more_data)
-        self.assertEqual(len(result_detail.more_data), 1)
-        self.assertEqual(result_detail.more_data[0], "more data")
+        assert_more_data(self, result_detail, ["more data"])
 
     def test_str_without_args(self):
         result_detail = ResultDetail(title='title')
