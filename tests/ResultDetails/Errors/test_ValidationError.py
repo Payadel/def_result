@@ -1,7 +1,7 @@
 import unittest
 
 from def_result.ResultDetails.Errors.ValidationError import ValidationError
-from tests.helpers import assert_error_detail, assert_result_detail
+from tests.helpers import assert_error_detail
 
 
 class TestValidationError(unittest.TestCase):
