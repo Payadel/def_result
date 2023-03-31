@@ -1,5 +1,5 @@
 import traceback
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from def_result.ResultDetail import ResultDetail
 
@@ -15,7 +15,7 @@ class ErrorDetail(ResultDetail):
                  code: Optional[int] = 500,
                  errors: Optional[Dict[str, str]] = None,
                  exception: Optional[Exception] = None,
-                 more_data: Optional[Any] = None):
+                 more_data: Optional[List[Any]] = None):
         super().__init__(title if title else "An error occurred", message, code, more_data)
         self.errors = errors
         self.exception = exception
