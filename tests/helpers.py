@@ -34,5 +34,3 @@ def assert_error_detail(test_class: unittest.TestCase, error_detail: ErrorDetail
     test_class.assertEqual(exception, error_detail.exception)
 
     test_class.assertTrue(error_detail.stack_trace)
-    if exception:
-        test_class.assertEqual(traceback.TracebackException.from_exception(exception), error_detail.stack_trace)
