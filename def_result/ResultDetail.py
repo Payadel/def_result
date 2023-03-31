@@ -2,6 +2,8 @@ from typing import Any, List, Optional
 
 
 class ResultDetail:
+    """ Stores the details of a result. """
+
     title: str
     message: Optional[str]
     code: Optional[int]
@@ -20,9 +22,12 @@ class ResultDetail:
             self.more_data = more_data
 
     def is_instance_of(self, cls):
+        """ Checks if the result detail is an instance of the given class. """
         return isinstance(self, cls)
 
     def add_more_data(self, data: Any) -> None:
+        """ Adds more data to the result detail """
+
         if not data:
             return
         if not self.more_data:
