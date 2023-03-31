@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "def_result"
-version = "0.0.0"
+version = "0.0.1"
 description = ""
 authors = ["Payadel <payadelteam@gmail.com>"]
 license = "GPLV3"
