@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "def_result"
 version = "0.0.1"
-description = ""
+description = "A functional error handling library for working with the results of a function to improve managing errors."
 authors = ["Payadel <payadelteam@gmail.com>"]
 license = "GPLV3"
 readme = "README.md"
