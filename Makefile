@@ -19,6 +19,15 @@ release-action: ## Run release action
 changelog-action: ## Run changelog action
 	gh workflow run Changelog --ref $(REF) -f version=$(VERSION)
 
+build-action: ## Run build action
+	gh workflow run build --ref $(REF)
+
+publish-action: ## Run publish action
+	gh workflow run 'Publish to PyPI' --ref $(REF) -f version=$(VERSION)
+
+publish-test-action: ## Run publish test action
+	gh workflow run 'Publish to Test.PyPI' --ref $(REF) -f version=$(VERSION)
+
 # Targets for running standard-version commands
 version: ## Get current program version
 	node -p -e "require('./package.json').version"
