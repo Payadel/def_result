@@ -1,42 +1,32 @@
 # Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other
-method with the owners of this repository before making a change. Please note we have
-a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+method with the owners of this repository before making a change.
+
+Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
 
 ## Development environment setup
-
-> **[?]**
-> Proceed to describe how to setup local development environment.
-> e.g:
 
 To set up a development environment, please follow these steps:
 
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/GITHUB_USERNAME/REPO_SLUG
+   git clone https://github.com/Payadel/def_result
    ```
 
-2. To run this project, you will need to add the following environment variables to your .env file
+2. Run `requirements.py`:
+    - Option1: `python3 requirements.py`
+    - Option2: `chmod +x requirements.py; ./requirements.py`
 
-`API_KEY`
 
-`ANOTHER_API_KEY`
-
-3. TODO
-
-4. Running Tests. To run tests, run the following command
-
-```bash
-  npm run test
-```
+3. Run `tox` and ensure everything is OK.
 
 ## Issues and feature requests
 
 You've found a bug in the source code, a mistake in the documentation or maybe you'd like a new feature? You can help us
-by [submitting an issue on GitHub](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues). Before you create an issue,
-make sure to search the issue archive -- your issue may have already been addressed!
+by [submitting an issue on GitHub](https://github.com/Payadel/def_result/issues). Before you create an issue, make sure
+to search the issue archive -- your issue may have already been addressed!
 
 Please try to create bug reports that are:
 
@@ -50,13 +40,14 @@ Please try to create bug reports that are:
 ### How to submit a Pull Request
 
 1. Search our repository for open or closed
-   [Pull Requests](https://github.com/GITHUB_USERNAME/REPO_SLUG/pulls)
+   [Pull Requests](https://github.com/Payadel/def_result/pulls)
    that relate to your submission. You don't want to duplicate effort.
 2. Fork the project
 3. Create your feature branch (`git checkout -b feat/amazing_feature`)
 4. Commit your changes (`git commit -m 'feat: add amazing_feature'`)
 
 > This project uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
+You can see valid types from [this file](../.versionrc.json).
 
 5. Push to the branch (`git push origin feat/amazing_feature`)
 6. Open a Pull Request

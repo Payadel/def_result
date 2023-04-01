@@ -18,6 +18,14 @@ def divide_numbers_support_result(a: int, b: int) -> Result:
     return Result.ok(a / b)
 
 
+def func_without_output_ok():
+    pass
+
+
+def func_without_output_error():
+    raise Exception("fake error")
+
+
 class TestDefResultDecorator(unittest.TestCase):
     def test_def_result_on_simple_function_ok(self):
         # Test that the decorator returns a Result object with ok status when the function runs successfully
@@ -51,6 +59,20 @@ class TestDefResultDecorator(unittest.TestCase):
         assert_result(test_class=self, result=result, success=False, detail=result.detail)
         assert_result_detail(test_class=self, result_detail=result.detail, title="BadRequest Error",
                              message="Cannot divide by zero", code=400)
+
+    def test_func_without_output_ok(self):
+        decorated_function = def_result(func_without_output_ok)
+        result = decorated_function()
+
+        assert_result(test_class=self, result=result, success=True, value=None)
+
+    def test_func_without_output_error(self):
+        decorated_function = def_result(func_without_output_error)
+        result = decorated_function()
+
+        assert_result(test_class=self, result=result, success=False, detail=result.detail)
+        assert_result_detail(test_class=self, result_detail=result.detail, title="An exception occurred",
+                             message="fake error", code=500)
 
 
 if __name__ == '__main__':

@@ -30,7 +30,7 @@ class ErrorDetail(ResultDetail):
     def __str__(self):
         error_details = super().__str__()
 
-        if self.errors:
+        if self.errors is not None:
             error_details += "Errors: " + str(self.errors) + "\n"
 
         if self.exception:

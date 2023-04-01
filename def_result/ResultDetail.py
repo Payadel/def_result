@@ -31,7 +31,7 @@ class ResultDetail:
         Raises:
             ValueError: If title is empty or None.
         """
-        if not title:
+        if title is None or title == '':
             raise ValueError("title is required")
         self.title = title
         self.message = message
@@ -57,11 +57,9 @@ class ResultDetail:
             data (Any): Additional data to add to the result detail.
         """
 
-
-        if not data:
+        if data is None:
             return
-        if not self.more_data:
-            self.more_data = []
+        self.more_data = []
         self.more_data.append(data)
 
     def __str__(self):
@@ -70,10 +68,8 @@ class ResultDetail:
         Returns:
             str: A string representation of the result detail.
         """
-        result: str = ""
+        result: str = f"Title: {self.title}\n"
 
-        if self.title:
-            result += f"Title: {self.title}\n"
         if self.message:
             result += f"Message: {self.message}\n"
         if self.code:
