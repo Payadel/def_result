@@ -1,33 +1,25 @@
-<h1 align="center">
-  <a href="">
-    <img src="" alt="Logo" width="100" height="100">
-  </a>
-</h1>
-
 <div align="center">
-  PROJECT_NAME
+  <h1>def_result</h1>
   <br />
   <a href="#getting-started"><strong>Getting Started »</strong></a>
   <br />
   <br />
-  <a href="https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
+  <a href="https://github.com/Payadel/def_result/issues/new?assignees=&labels=scope-bug&template=BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
   ·
-  <a href="https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
+  <a href="https://github.com/Payadel/def_result/issues/new?assignees=&labels=scope-enhancement&template=FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
   .
-  <a href="https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
+  <a href="https://github.com/Payadel/def_result/issues/new?assignees=&labels=help-wanted&template=SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
 </div>
 
 <div align="center">
 <br />
 
-![GitHub](https://img.shields.io/github/license/User/Repo)
+![GitHub](https://img.shields.io/github/license/Payadel/def_result)
 
-[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-[![code with love by GITHUB_USERNAME](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-GITHUB_USERNAME-ff1414.svg?style=flat-square)](https://github.com/GITHUB_USERNAME)
+[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/Payadel/def_result/issues?q=is%3Aissue+is%3Aopen)
+[![code with love by Payadel](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Payadel-ff1414.svg?style=flat-square)](https://github.com/Payadel)
 
 [![PyPI Project Version][pypi-image]][pypi-project-url]
-[![Build Status][build-image]][build-url]
-[![][stars-image]][stars-url]
 
 </div>
 
@@ -61,135 +53,147 @@
 
 ## About
 
-> **[?]**
-> Provide general information about your project here.
-> Put a meaningful, short, plain-language description of:
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> What this project is trying to accomplish and why it matters?
-> Why did you undertake it?
-> Describe the problem(s) this project solves.
-> Describe how this software can improve the lives of its audience.
-> Describe what sets this apart from related-projects.
-> You don't have to answer all the questions -- just the ones relevant to your project.
+`def_result` is a Python library for working with the results of a function to solve problem of **managing errors**.
 
-### Demo
+It provides a simple way to handle and manipulate the return values of functions, with built-in support for error
+handling and more.
 
-**Screenshot**: If the software has visual components, place a screenshot after the description; e.g.,
+### Purpose
 
-<details>
-<summary>Screenshots</summary>
-<br>
+`def_result` is a functional error handling library.
 
-> **[?]**
-> Please provide your screenshots here.
+In functional programming, it is not always appropriate to use traditional `try-catch` blocks as they can lead to code
+that is difficult to read, understand, and maintain.
 
-|                               Home Page                               |                               Login Page                               |
-| :-------------------------------------------------------------------: | :--------------------------------------------------------------------: |
-| <img src="docs/images/screenshot.png" title="Home Page" width="100%"> | <img src="docs/images/screenshot.png" title="Login Page" width="100%"> |
+The purpose of Functional Error Handling Libraries is to provide developers with a set of abstractions and tools for
+managing errors in a functional way.
 
-</details>
+The goal of this library is to make error handling m**ore explicit, composable, and testable**. By using functional
+error handling libraries, developers can write code that is **more robust, maintainable, and expressive**.
 
-### Built With
+### Motivation
 
-> **[?]**
-> Please provide the technologies that are used in the project.
+The motivation behind this library is the desire to write code that is more reliable, easier to understand, and less
+prone to errors. In many cases, functional programming languages provide built-in abstractions for handling errors.
+However, for languages that do not have built-in support for functional error handling, libraries like this can provide
+a useful alternative.
 
-**Client:** React, Redux, TailwindCSS
+### What problems are solved?
 
-**Server:** Node, Express
+This library can solve several problems, including:
+
+- Ensuring that error handling is consistent across an application.
+- Making it easier to test error handling code.
+- Making error handling code more readable and maintainable.
+- Encouraging developers to handle errors in a more functional way, which can lead to more reliable and robust code.
+
+By improving the way that developers handle errors, this library can make the lives of their audience easier. Developers
+can spend less time debugging and more time writing code that adds value to their organization. Additionally, by using
+functional programming concepts, developers can write code that is easier to reason about and understand, which can lead
+to faster development cycles and better quality code.
 
 ## Getting Started
 
-### Prerequisites
-
-> **[?]**
-> What are the project requirements/dependencies?
-> Describe any dependencies that must be installed for this software to work. This includes programming languages, databases or other storage mechanisms, build tools, frameworks, and so forth. If specific versions of other software are required, or known not to work, call that out.
-
-### Installation
-
-> **[?]**
-> Describe how to install and get started with the project.
-> Detailed instructions on how to install, configure, and get the project running. This should be frequently tested to ensure reliability. Alternatively, link to a separate [INSTALL](INSTALL.md) document.
+`pip install def_result`
 
 ## Usage
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+### Sample 1: use decorator for pure functions
 
-```javascript
-import Component from 'my-project'
+In this example, def_result is used as a decorator to wrap the `divide_numbers` method.
 
-function App() {
-    return <Component/>
-}
+```python
+from def_result import def_result
+
+
+@def_result
+def divide_numbers(a: int, b: int):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
+
+result = divide_numbers(10, 0)
+
+if result.success:
+    print(f"Operation was successful: {result.value}")
+else:
+    print(f"Operation failed: {str(result.detail)}")
+```
+
+### Sample 2: use `Result` in function
+
+```python
+from def_result import def_result
+
+
+def divide_numbers(a: int, b: int):
+    if b == 0:
+        Result.fail(ValidationError(message="Cannot divide by zero"))
+    return Result.ok(a / b)
+
+
+result = divide_numbers(10, 0)
+
+if result.success:
+    print(f"Operation was successful: {result.value}")
+else:
+    print(f"Operation failed: {str(result.detail)}")
 ```
 
 ### Documentation
 
 [Documentation](https://linktodocumentation)
 
-## Known issues
-
-Document any known significant shortcomings with the software.
-
 ## CHANGELOG
+
+Please see the [CHANGELOG](CHANGELOG.md) file.
 
 ## Features
 
--
--
+- **Easy to use:** `def_result` is designed to be simple and easy to use, with a minimal API and clear documentation.
+- **Compatibility with existing code:** def_result can be easily added to existing codebases without the need for major
+  refactoring.
+- **Optional error handling:** You can choose to ignore the error value returned by the function, in which case the
+  calling code will simply receive the result value.
 
 ## Roadmap
 
-See the [open issues](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues) for a list of proposed features (and known
-issues).
+See the [open issues](https://github.com/Payadel/def_result/issues) for a list of proposed features (and known issues).
 
-- [Top Feature Requests](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (
+- [Top Feature Requests](https://github.com/Payadel/def_result/issues?q=label%3Ascope-enhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (
   Add your votes using the 👍 reaction)
-- [Top Bugs](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions-%2B1-desc) (
+- [Top Bugs](https://github.com/Payadel/def_result/issues?q=is%3Aissue+is%3Aopen+label%3Ascope-bug+sort%3Areactions-%2B1-desc) (
   Add your votes using the 👍 reaction)
-- [Newest Bugs](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+- [Newest Bugs](https://github.com/Payadel/def_result/issues?q=is%3Aopen+is%3Aissue+label%3Ascope-bug)
 
 ## Support
 
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
+Reach out to the maintainers at one of the following places:
 
-Reach out to the maintainer at one of the following places:
-
-- [GitHub issues](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+)
-- Contact options listed on [this GitHub profile](https://github.com/GITHUB_USERNAME)
-
-## Used By
-
-This project is used by the following companies:
-
-- Company 1
-- Company 2
+- [GitHub issues](https://github.com/Payadel/def_result/issues/new?assignees=&labels=question&template=SUPPORT_QUESTION.md&title=support%3A+)
 
 ## FAQ
 
-#### Question 1
+#### Do I need to rewrite all the functions in a new way?
 
-Answer 1
+not necessarily. By using decorator, you can convert the output of old functions to `Result`. In this method, your code
+is wrap in a `try-except` block and the final output is converted to Result.
 
-#### Question 2
+#### I want all function exceptions to be managed.
 
-Answer 2
+By using decorator, your code is wrap in a `try-except` block and the final output is converted to Result. With this
+method, all function exceptions are managed.
 
 ## Project assistance
 
-If you want to say **thank you** or/and support active development of PROJECT_NAME:
+If you want to say **thank you** or/and support active development of `def_result`:
 
-- Add a [GitHub Star](https://github.com/GITHUB_USERNAME/REPO_SLUG) to the project.
-- Tweet about the PROJECT_NAME.
+- Add a [GitHub Star](https://github.com/Payadel/def_result) to the project.
 - Write interesting articles about the project on [Dev.to](https://dev.to/), [Medium](https://medium.com/) or your
   personal blog.
 
-Together, we can make PROJECT_NAME **better**!
+Together, we can make `def_result` **better**!
 
 ## Contributing
 
@@ -201,14 +205,14 @@ Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you f
 
 ## Authors & contributors
 
-The original setup of this repository is by [FULL_NAME](https://github.com/GITHUB_USERNAME).
+The original setup of this repository is by [Payadel](https://github.com/Payadel).
 
 For a full list of all authors and contributors,
-see [the contributors page](https://github.com/GITHUB_USERNAME/REPO_SLUG/contributors).
+see [the contributors page](https://github.com/Payadel/def_result/contributors).
 
 ## Security
 
-PROJECT_NAME follows good practices of security, but 100% security cannot be assured. PROJECT_NAME is provided **"as
+`def_result` follows good practices of security, but 100% security cannot be assured. `def_result` is provided **"as
 is"** without any **warranty**.
 
 _For more information and to report security issues, please refer to our [security documentation](docs/SECURITY.md)._
@@ -219,22 +223,7 @@ This project is licensed under the **GPLv3**.
 
 See [LICENSE](LICENSE) for more information.
 
-## Acknowledgements
-
-> **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.
-
-## Related
-
-Here are some related projects
-
-[Awesome README](https://github.com/matiassingers/awesome-readme)
 
 <!-- Badges: -->
 
 [pypi-project-url]: https://pypi.org/project/def_result/
-
-[build-url]: https://github.com/Payadel/def_result/actions/workflows/build.yaml
-
-[stars-url]: https://github.com/Payadel/def_result
