@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/Payadel/def_result/compare/v0.0.1...v0.0.2) (2023-04-01)
+
+
+### Fixes
+
+* minor updates ([fb9db93](https://github.com/Payadel/def_result/commit/fb9db937deab11535adf95867ef5bb97e11bda39))
+
+
+### Tests
+
+* add more test for decorator ([c3f20bc](https://github.com/Payadel/def_result/commit/c3f20bc23db364a393b039c0a556543763ff6423))
+
+
+### Development: CI/CD, Build, etc
+
+* add `Update poetry version` to publish-test.yaml and fix `pypi_token` ([4a8fcaf](https://github.com/Payadel/def_result/commit/4a8fcaf099bdd937e9dae7a9af01dffa0fd72f7f))
+* add description to pyproject.toml ([60b6892](https://github.com/Payadel/def_result/commit/60b689217b484a4e95079f401252d1366ab47bca))
+* **coverage:** add coverage.yaml github action ([8106295](https://github.com/Payadel/def_result/commit/8106295f21b44274b0456b53060cc068d7af71eb))
+* **coverage:** update coverage.yaml ([2767351](https://github.com/Payadel/def_result/commit/2767351ebf63f9a93c52199cbfe9648035c052c3))
+* fix inputs in publish-test.yaml ([793e3f8](https://github.com/Payadel/def_result/commit/793e3f8df92aa8a62e10f426c7918e27acd77624))
+* **release:** fix `Update poetry version` ([c3e1db9](https://github.com/Payadel/def_result/commit/c3e1db9e624875db89941e0a2558bc6324e177f5))
+* **release:** fix pypi_token ([07bfc18](https://github.com/Payadel/def_result/commit/07bfc1805d4080f5889b4a03dec9355b63412baf))
+* remove excess section (scripts) from pyproject.toml ([daa7f36](https://github.com/Payadel/def_result/commit/daa7f366764d855a711541b94058b20a4dcb5eb0))
+* **requirements:** add `Install poetry` section to requirements.py ([ab09e1c](https://github.com/Payadel/def_result/commit/ab09e1cb9e1fd0f7646aa4e839d7f6b271669a90))
+* separate publish from release ([8cfb936](https://github.com/Payadel/def_result/commit/8cfb9360b0409104891965da90361f0ad01a0557))
+* update Makefile. supports more GitHub action ([5d65dda](https://github.com/Payadel/def_result/commit/5d65ddad8ae119c5bde394c35ffd7a627ee10ce2))
+
+
+### Documents
+
+* **contributing:** update CONTRIBUTING.md ([d137023](https://github.com/Payadel/def_result/commit/d1370237a0939c6dd57c1adec63072cee42fd0fb))
+* **readme:** add code coverage badge ([59c5b97](https://github.com/Payadel/def_result/commit/59c5b97d0f306501139e58b7be8a13ff368aa39d))
+* **readme:** update README.md ([cb888fb](https://github.com/Payadel/def_result/commit/cb888fbff103581b6b327efdc3acb5de086d6347))
+* **readme:** update README.md ([67c9b71](https://github.com/Payadel/def_result/commit/67c9b717f3b5296419386498f81fac0a6cccb01e))
+* **readme:** update table of contents ([7afad9a](https://github.com/Payadel/def_result/commit/7afad9addb9e31988271e89a2d2b7220418c381c))
+* update PULL_REQUEST_TEMPLATE.md ([8cfc570](https://github.com/Payadel/def_result/commit/8cfc570444fe4abc0d94570e64833f7d3902f23d))
+* update README.md ([fe43dfd](https://github.com/Payadel/def_result/commit/fe43dfd42028f028603f6de3de5df9375623b392))
+
 ### 0.0.1 (2023-03-31)
 
 ### Features
