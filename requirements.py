@@ -97,11 +97,14 @@ def main():
         print(generate_message(f"Can not enable pre-rebase git hook. Can not find git hooks directory."))
 
     # Install npm packages
-    if get_shell_return_code("npm --version") == 0:
-        print(generate_message("Install npm packages..."))
+    if get_shell_return_code("poetry --version") != 0:
+        print(generate_message("Install poetry packages..."))
         run_shell("npm install")
-    else:
-        print(generate_message("Can not install npm packages."))
+
+    # Install poetry
+    if get_shell_return_code("poetry install") == 0:
+        run_shell(f"{pip_name} install poetry")
+    run_shell("poetry install")
 
 
 if __name__ == '__main__':
