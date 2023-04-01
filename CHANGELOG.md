@@ -2,20 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.2](https://github.com/Payadel/def_result/compare/v0.0.1...v0.0.2) (2023-03-31)
-
-
-### Fixes
-
-* minor updates ([fb9db93](https://github.com/Payadel/def_result/commit/fb9db937deab11535adf95867ef5bb97e11bda39))
-
-
-### Development: CI/CD, Build, etc
-
-* add `Update poetry version` to publish-test.yaml and fix `pypi_token` ([4a8fcaf](https://github.com/Payadel/def_result/commit/4a8fcaf099bdd937e9dae7a9af01dffa0fd72f7f))
-* **release:** fix `Update poetry version` ([c3e1db9](https://github.com/Payadel/def_result/commit/c3e1db9e624875db89941e0a2558bc6324e177f5))
-* **release:** fix pypi_token ([07bfc18](https://github.com/Payadel/def_result/commit/07bfc1805d4080f5889b4a03dec9355b63412baf))
-
 ### 0.0.1 (2023-03-31)
 
 ### Features
