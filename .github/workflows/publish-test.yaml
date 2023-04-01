@@ -2,17 +2,18 @@ name: Publish to Test.PyPI
 
 on:
   workflow_dispatch:
-    version:
-      required: false
-      default: ''
-      description: "poetry version"
+    inputs:
+      version:
+        required: false
+        default: ''
+        description: "poetry version"
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
     # Limit branch:
-    if: github.ref == 'refs/heads/dev'
+    #if: github.ref == 'refs/heads/dev'
     # Or
     #if: github.ref != 'refs/heads/main'
 
