@@ -14,11 +14,10 @@
 <div align="center">
 <br />
 
-![GitHub](https://img.shields.io/github/license/Payadel/def_result)
-
-[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/Payadel/def_result/issues?q=is%3Aissue+is%3Aopen)
 [![code with love by Payadel](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Payadel-ff1414.svg?style=flat-square)](https://github.com/Payadel)
 
+![GitHub](https://img.shields.io/github/license/Payadel/def_result)
+[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/Payadel/def_result/issues?q=is%3Aissue+is%3Aopen)
 [![PyPI Project Version][pypi-image]][pypi-project-url]
 
 </div>
@@ -27,27 +26,22 @@
 <summary>Table of Contents</summary>
 
 - [About](#about)
-    - [Demo](#demo)
-    - [Built With](#built-with)
+    - [Purpose](#Purpose)
+    - [Motivation](#Motivation)
+    - [What problems are solved?](#what-problems-are-solved)
 - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
 - [Usage](#usage)
     - [Documentation](#documentation)
-- [Known issues](#known-issues)
 - [CHANGELOG](#changelog)
 - [Features](#features)
 - [Roadmap](#roadmap)
 - [Support](#support)
-- [Used By](#used-by)
 - [FAQ](#faq)
 - [Project assistance](#project-assistance)
 - [Contributing](#contributing)
 - [Authors & contributors](#authors--contributors)
 - [Security](#security)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Related](#related)
 
 </details>
 
