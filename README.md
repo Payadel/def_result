@@ -48,7 +48,7 @@
 
 ## About
 
-`def_result` is a Python library for working with the results of a function to solve problem of **managing errors**.
+`def_result` is a python package that stores the result of functions and its details to improve **managing errors**.
 
 It provides a simple way to handle and manipulate the return values of functions, with built-in support for error
 handling and more.
@@ -195,6 +195,9 @@ Together, we can make `def_result` **better**!
 First off, thanks for taking the time to contribute! Contributions are what make the free/open-source community such an
 amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly
 appreciated**.
+
+This project uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
+You can see valid types from [this file](.versionrc.json).
 
 Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
 
