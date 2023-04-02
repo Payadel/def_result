@@ -122,12 +122,13 @@ else:
 ### Sample 2: use `Result` in function
 
 ```python
-from def_result import def_result
+from def_result import Result
+from def_result.ResultDetails.Errors import ValidationError
 
 
 def divide_numbers(a: int, b: int):
     if b == 0:
-        Result.fail(ValidationError(message="Cannot divide by zero"))
+        return Result.fail(ValidationError(message="Cannot divide by zero"))
     return Result.ok(a / b)
 
 
@@ -136,7 +137,9 @@ result = divide_numbers(10, 0)
 if result.success:
     print(f"Operation was successful: {result.value}")
 else:
-    print(f"Operation failed: {str(result.detail)}")
+    print(f"Operation failed:")
+    print(str(result.detail))
+
 ```
 
 ## CHANGELOG
