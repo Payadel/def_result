@@ -47,7 +47,7 @@ Please try to create bug reports that are:
 4. Commit your changes (`git commit -m 'feat: add amazing_feature'`)
 
 > This project uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
-You can see valid types from [this file](../.versionrc.json).
+You can see valid types from [this file](https://github.com/Payadel/def_result/blob/main/.configs/commitlint.config.js).
 
 5. Push to the branch (`git push origin feat/amazing_feature`)
 6. Open a Pull Request
