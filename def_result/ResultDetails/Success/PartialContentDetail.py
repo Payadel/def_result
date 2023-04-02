@@ -5,10 +5,11 @@ from def_result.ResultDetails.SuccessDetail import SuccessDetail
 
 class PartialContentDetail(SuccessDetail):
     """
-    Stores the details of a partial success operation.
+    Stores the details of a partial success operation. Default code is 206.
 
     Inherits from SuccessDetail class.
     """
+
     def __init__(self, title: Optional[str] = "Partial content",
                  message: Optional[str] = None,
                  code: Optional[int] = 206,

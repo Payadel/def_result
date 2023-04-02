@@ -5,7 +5,11 @@ from def_result.ResultDetail import ResultDetail
 
 
 class ErrorDetail(ResultDetail):
-    """ Stores the error details of a result. """
+    """
+    Stores the error details of a result.
+
+    Inherits from ResultDetail class.
+    """
     errors: Optional[Dict[str, str]]
     exception: Optional[Exception]
     stack_trace: traceback.StackSummary
@@ -22,7 +26,9 @@ class ErrorDetail(ResultDetail):
         self.stack_trace = traceback.extract_stack()
 
     def add_or_update_error(self, key: str, value: str):
-        """ Add or update an error in the dictionary. """
+        """
+        Add or update an error in the dictionary.
+        """
         if self.errors is None:
             self.errors = {}
         self.errors[key] = value
@@ -35,6 +41,6 @@ class ErrorDetail(ResultDetail):
 
         if self.exception:
             error_details += "Exception: " + str(self.exception) + "\n"
-            error_details += "Stack trace: " + str(self.stack_trace) + "\n"
+        error_details += "Stack trace: " + ''.join(self.stack_trace.format()) + "\n"
 
         return error_details

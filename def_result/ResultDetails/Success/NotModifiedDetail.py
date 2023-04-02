@@ -4,7 +4,12 @@ from def_result.ResultDetails.SuccessDetail import SuccessDetail
 
 
 class NotModifiedDetail(SuccessDetail):
-    """ The resource has not been modified since the last request """
+    """
+    The resource has not been modified since the last request. Default code is 304.
+
+    Inherits from SuccessDetail class.
+    """
+
     def __init__(self, title: Optional[str] = "The resource has not been modified since the last request",
                  message: Optional[str] = None,
                  code: Optional[int] = 304,

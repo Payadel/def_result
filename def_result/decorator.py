@@ -7,13 +7,15 @@ def def_result(func):
     A decorator function that wraps the return value of a function with a `Result`
     object containing additional information such as success status and error messages.
 
-    Args:
-        func: The function to be wrapped.
-
-    Returns:
-        A new function that wraps the return value of `func` in a `Result` object.
+    :arg: `func`: The function to wrap.
+    :return: The wrapped function.
     """
+
     def wrapper(*args, **kwargs):
+        """
+        It wraps a function and returns a Result object.
+        :return: a Result object.
+        """
         try:
             result_value = func(*args, **kwargs)
             if isinstance(result_value, Result):

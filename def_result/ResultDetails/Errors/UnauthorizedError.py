@@ -4,17 +4,12 @@ from def_result.ResultDetails.ErrorDetail import ErrorDetail
 
 
 class UnauthorizedError(ErrorDetail):
-    """ An error that occurs when a user is not authorized to perform a certain action.
+    """ An error that occurs when a user is not authorized to perform a certain action. Default code is 401.
 
     This error is a subclass of `ErrorDetail`, which provides additional details about the error.
 
-    Args:
-        title (str, optional): A title for the error. Defaults to "Unauthorized Error".
-        message (str, optional): A message describing the error. Defaults to None.
-        code (int, optional): An error code associated with the error. Defaults to 401.
-        errors (Dict[str, str], optional): A dictionary containing additional error details. Defaults to None.
-        exception (Exception, optional): An exception that caused the error. Defaults to None.
-        more_data (List[Any], optional): A list of additional data associated with the error. Defaults to None.
+    Inherits from ErrorDetail class.
+
     """
 
     def __init__(self, title: Optional[str] = "Unauthorized Error",

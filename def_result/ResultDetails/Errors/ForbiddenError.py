@@ -4,7 +4,12 @@ from def_result.ResultDetails.ErrorDetail import ErrorDetail
 
 
 class ForbiddenError(ErrorDetail):
-    """ Represents a Forbidden error. """
+    """
+    Represents a Forbidden error. Default code is 403.
+
+    Inherits from ErrorDetail class.
+    """
+
     def __init__(self, title: Optional[str] = "Forbidden Error",
                  message: Optional[str] = None,
                  code: Optional[int] = 403,

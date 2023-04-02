@@ -2,6 +2,7 @@ import unittest
 
 from def_result.Result import Result
 from def_result.ResultDetail import ResultDetail
+from def_result.ResultDetails import SuccessDetail
 from tests.helpers import assert_result
 
 
@@ -78,6 +79,22 @@ class TestResult(unittest.TestCase):
         # Fail
         result = Result.fail(detail=detail)
         self.assertEqual(100, result.code(default_success_code=0, default_error_code=1))
+
+    def test_str_success_without_args(self):
+        result = Result.ok()
+        self.assertEqual("success: True\n", str(result))
+
+    def test_str_fail_without_args(self):
+        result = Result.fail()
+        self.assertEqual("success: False\n", str(result))
+
+    def test_str_with_value(self):
+        result = Result.ok("123")
+        self.assertEqual("success: True\nValue: 123\n", str(result))
+
+    def test_str_with_detail_(self):
+        result = Result.ok(detail=SuccessDetail(message="test"))
+        self.assertTrue(str(result).startswith("success: True\nDetail:\n"))
 
 
 if __name__ == "__main__":

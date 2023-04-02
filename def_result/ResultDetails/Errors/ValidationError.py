@@ -4,7 +4,12 @@ from def_result.ResultDetails.ErrorDetail import ErrorDetail
 
 
 class ValidationError(ErrorDetail):
-    """ Represents a validation error."""
+    """
+    Represents a validation error. Default code is 400.
+
+    Inherits from ErrorDetail class.
+    """
+
     def __init__(self, title: Optional[str] = "One or more validation errors occurred",
                  message: Optional[str] = None,
                  code: Optional[int] = 400,
