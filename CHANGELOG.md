@@ -1,46 +1,52 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file.
+See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [1.0.0](https://github.com/Payadel/def_result/compare/v0.0.3...v1.0.0) (2023-04-02)
 
-
 ### Features
 
-* **Result:** implement `Result.__str__` ([6647fb7](https://github.com/Payadel/def_result/commit/6647fb7b4904fbe6ffe40eaf0158870823400953))
-* **Result:** implement `ResultDetail.__repr__` ([baeec3e](https://github.com/Payadel/def_result/commit/baeec3ecf13898e34add5a27a3dd3047a61cb7e7))
-
-
-### Development: CI/CD, Build, etc
-
-* add more data to pyproject.toml ([0e190d4](https://github.com/Payadel/def_result/commit/0e190d4101994de46a6e9e5aab968001c4af32d2))
-
+* **Result:**
+  implement `Result.__str__` ([6647fb7](https://github.com/Payadel/def_result/commit/6647fb7b4904fbe6ffe40eaf0158870823400953))
+* **Result:**
+  implement `ResultDetail.__repr__` ([baeec3e](https://github.com/Payadel/def_result/commit/baeec3ecf13898e34add5a27a3dd3047a61cb7e7))
 
 ### Fixes
 
-* add stack trace to `ErrorDetail.__str__` ([9142862](https://github.com/Payadel/def_result/commit/91428625c6e1d35b6e1dc2e59488556e2e810649))
-* fix Result.__str__ and add test case ([3470371](https://github.com/Payadel/def_result/commit/3470371dcca4efa3418cc7b83f912c750e612bb1))
-* fix ResultDetail.__repr__ and add test case ([f84c29b](https://github.com/Payadel/def_result/commit/f84c29b717fd471ab4acaf73a6f25b4deee52f0f))
+* add stack trace
+  to `ErrorDetail.__str__` ([9142862](https://github.com/Payadel/def_result/commit/91428625c6e1d35b6e1dc2e59488556e2e810649))
+* fix Result.__str__ and add test
+  case ([3470371](https://github.com/Payadel/def_result/commit/3470371dcca4efa3418cc7b83f912c750e612bb1))
+* fix ResultDetail.__repr__ and add test
+  case ([f84c29b](https://github.com/Payadel/def_result/commit/f84c29b717fd471ab4acaf73a6f25b4deee52f0f))
 * update docstrings ([b3a5ab7](https://github.com/Payadel/def_result/commit/b3a5ab7393e22450c63931d753ec422aceb2c836))
-
-
-### Documents
-
-* **readme:** add build status to README.md ([6948384](https://github.com/Payadel/def_result/commit/6948384dfe60584ea2c1f308f19dfdaae6396d38))
-* **readme:** update codes in README.md ([e56e770](https://github.com/Payadel/def_result/commit/e56e7709b127e105df41ebad1d0382d6c7dc0d38))
-* **readme:** use absolute links to fix links in package readme file ([b7b2041](https://github.com/Payadel/def_result/commit/b7b204129d25b4bdd802b2eecf7c980061992617))
-
-### [0.0.3](https://github.com/Payadel/def_result/compare/v0.0.2...v0.0.3) (2023-04-02)
-
-
-### Features
-
-* import files in __init__ files ([6e2ec3e](https://github.com/Payadel/def_result/commit/6e2ec3e25ac9d193699702f08ca7cffbcf2dddf2))
-
 
 ### Development: CI/CD, Build, etc
 
-* add .pyc files to .gitignore ([34dfc1f](https://github.com/Payadel/def_result/commit/34dfc1f7b0b7517fbb5caf6716ffae21ca63ff31))
+* add more data to
+  pyproject.toml ([0e190d4](https://github.com/Payadel/def_result/commit/0e190d4101994de46a6e9e5aab968001c4af32d2))
+
+### Documents
+
+* **readme:** add build status to
+  README.md ([6948384](https://github.com/Payadel/def_result/commit/6948384dfe60584ea2c1f308f19dfdaae6396d38))
+* **readme:** update codes in
+  README.md ([e56e770](https://github.com/Payadel/def_result/commit/e56e7709b127e105df41ebad1d0382d6c7dc0d38))
+* **readme:** use absolute links to fix links in package readme
+  file ([b7b2041](https://github.com/Payadel/def_result/commit/b7b204129d25b4bdd802b2eecf7c980061992617))
+
+### [0.0.3](https://github.com/Payadel/def_result/compare/v0.0.2...v0.0.3) (2023-04-02)
+
+### Features
+
+* import files in __init__
+  files ([6e2ec3e](https://github.com/Payadel/def_result/commit/6e2ec3e25ac9d193699702f08ca7cffbcf2dddf2))
+
+### Development: CI/CD, Build, etc
+
+* add .pyc files to
+  .gitignore ([34dfc1f](https://github.com/Payadel/def_result/commit/34dfc1f7b0b7517fbb5caf6716ffae21ca63ff31))
 * update Makefile ([6b7f4f8](https://github.com/Payadel/def_result/commit/6b7f4f8f1d1e68a001c0f3f8f9ac36ce328a500d))
 
 ### [0.0.2](https://github.com/Payadel/def_result/compare/v0.0.1...v0.0.2) (2023-04-01)
