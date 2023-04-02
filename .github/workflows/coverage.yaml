@@ -3,7 +3,7 @@ name: Coverage Report
 on:
   push:
     tags:
-      - 'v*'
+      - 'v**'
   workflow_dispatch:
 
 permissions:
@@ -31,6 +31,7 @@ jobs:
     - name: Run tests and generate coverage report
       run: |
         coverage run --source=def_result --branch -m pytest tests
+        rm coverage.md
         coverage report -m --skip-empty --format=markdown >> coverage.md
 
     - name: Read Report
