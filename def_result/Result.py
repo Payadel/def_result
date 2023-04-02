@@ -58,3 +58,11 @@ class Result:
         if self.detail and self.detail.code:
             return self.detail.code
         return default_success_code if self.success else default_error_code
+
+    def __str__(self) -> str:
+        result = f"success: {self.success}\n"
+        if self.success:
+            result += f"Value: {self.value}\n"
+        if self.detail:
+            result += f"Detail:\n{self.detail}\n"
+        return result
