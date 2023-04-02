@@ -80,7 +80,7 @@ class ResultDetail:
     def __repr__(self):
         result = self.__str__()
         if self.more_data and len(self.more_data) > 0:
-            result += "\nMore Data:\n"
+            result += "More Data:\n"
             for data in self.more_data:
                 result += f"\t{data}\n"
         return result

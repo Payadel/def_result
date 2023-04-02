@@ -51,6 +51,16 @@ class TestResultDetail(unittest.TestCase):
 
         self.assertEqual(expected, str(result_detail))
 
+    def test_repr_without_more_data(self):
+        result_detail = ResultDetail(title='title')
+        self.assertEqual(str(result_detail), repr(result_detail))
+
+    def test_repr_with_more_data(self):
+        result_detail = ResultDetail(title='title', more_data=["more data"])
+        expected = str(result_detail) + "More Data:\n\tmore data\n"
+
+        self.assertEqual(expected, repr(result_detail))
+
 
 class FakeDetail(ResultDetail):
     pass
