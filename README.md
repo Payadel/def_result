@@ -141,16 +141,16 @@ else:
 
 ## CHANGELOG
 
-Please see the [CHANGELOG](CHANGELOG.md) file.
+Please see the [CHANGELOG](https://github.com/Payadel/def_result/blob/main/CHANGELOG.md) file.
 
 ## Features
 
 - **Easy to use:** `def_result` is designed to be simple and easy to use, with a minimal API and clear documentation.
 - **Compatibility with existing code:** `def_result` can be easily added to existing codes without the need for major
   refactoring. You can use decorator for wrap old functions or write new functions without worrying about incompatibilities.
-- **Save any details you like:** Thanks to the [ResultDetail](def_result/ResultDetail.py) class, you can store various information about the output of the function. Also, by inheriting from this class, you can write new and customized classes for your project.
-- **Special details for errors:** With the [ErrorDetail](def_result/ResultDetails/ErrorDetail.py) class, you can store specific details about errors. For example, this class supports **stack trace** in a built-in way.
-- **Support for common details by default:** In [this link](def_result/ResultDetails), you can see the different types of details that are supported.
+- **Save any details you like:** Thanks to the [ResultDetail](https://github.com/Payadel/def_result/blob/main/def_result/ResultDetail.py) class, you can store various information about the output of the function. Also, by inheriting from this class, you can write new and customized classes for your project.
+- **Special details for errors:** With the [ErrorDetail](https://github.com/Payadel/def_result/blob/main/def_result/ResultDetails/ErrorDetail.py) class, you can store specific details about errors. For example, this class supports **stack trace** in a built-in way.
+- **Support for common details by default:** In [this link](https://github.com/Payadel/def_result/tree/main/def_result/ResultDetails), you can see the different types of details that are supported.
 
 ## Roadmap
 
@@ -198,7 +198,7 @@ First off, thanks for taking the time to contribute! Contributions are what make
 amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly
 appreciated**.
 
-Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
+Please read [our contribution guidelines](https://github.com/Payadel/def_result/blob/main/docs/CONTRIBUTING.md), and thank you for being involved!
 
 Please do not forget that this project uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
 You can see valid types from [this file](.versionrc.json).
@@ -215,10 +215,10 @@ see [the contributors page](https://github.com/Payadel/def_result/contributors).
 `def_result` follows good practices of security, but 100% security cannot be assured. `def_result` is provided **"as
 is"** without any **warranty**.
 
-_For more information and to report security issues, please refer to our [security documentation](docs/SECURITY.md)._
+_For more information and to report security issues, please refer to our [security documentation](https://github.com/Payadel/def_result/blob/main/docs/SECURITY.md)._
 
 ## License
 
 This project is licensed under the **GPLv3**.
 
-See [LICENSE](LICENSE) for more information.
+See [LICENSE](https://github.com/Payadel/def_result/blob/main/LICENSE) for more information.
