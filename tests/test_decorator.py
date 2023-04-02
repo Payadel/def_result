@@ -1,8 +1,7 @@
 import unittest
 
-from def_result.decorator import def_result
-from def_result.Result import Result
-from def_result.ResultDetails.Errors.BadRequestError import BadRequestError
+from def_result import Result, def_result
+from def_result.ResultDetails.Errors import BadRequestError
 from tests.helpers import assert_result, assert_result_detail
 
 

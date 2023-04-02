@@ -1,7 +1,19 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.0.3](https://github.com/Payadel/def_result/compare/v0.0.2...v0.0.3) (2023-04-02)
+
+
+### Features
+
+* import files in __init__ files ([6e2ec3e](https://github.com/Payadel/def_result/commit/6e2ec3e25ac9d193699702f08ca7cffbcf2dddf2))
+
+
+### Development: CI/CD, Build, etc
+
+* add .pyc files to .gitignore ([34dfc1f](https://github.com/Payadel/def_result/commit/34dfc1f7b0b7517fbb5caf6716ffae21ca63ff31))
+* update Makefile ([6b7f4f8](https://github.com/Payadel/def_result/commit/6b7f4f8f1d1e68a001c0f3f8f9ac36ce328a500d))
 
 ### [0.0.2](https://github.com/Payadel/def_result/compare/v0.0.1...v0.0.2) (2023-04-01)
 

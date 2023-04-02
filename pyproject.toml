@@ -1,10 +1,13 @@
+# https://python-poetry.org/docs/pyproject/
 [tool.poetry]
 name = "def_result"
-version = "0.0.2"
+version = "0.0.3"
 description = "A functional error handling library for working with the results of a function to improve managing errors."
 authors = ["Payadel <payadelteam@gmail.com>"]
-license = "GPLV3"
 readme = "README.md"
+license = "GPLV3"
+repository = "https://github.com/Payadel/def_result"
+keywords = ["functional programming", "error handling", "def", "function"]
 packages = [{ include = "def_result" }]
 
 [tool.poetry.dependencies]
