@@ -41,6 +41,6 @@ class ErrorDetail(ResultDetail):
 
         if self.exception:
             error_details += "Exception: " + str(self.exception) + "\n"
-            error_details += "Stack trace: " + str(self.stack_trace) + "\n"
+        error_details += "Stack trace: " + ''.join(self.stack_trace.format()) + "\n"
 
         return error_details
