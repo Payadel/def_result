@@ -2,7 +2,7 @@ from typing import Any, List, Optional
 
 
 class ResultDetail:
-    """ Stores the details of a result.
+    """ Stores information about the result
 
     Attributes:
         title (str): A title for the result detail.
@@ -10,7 +10,6 @@ class ResultDetail:
         code (int, optional): A code associated with the result detail. Defaults to None.
         more_data (List[Any]): A list of additional data associated with the result detail. Defaults to an empty list.
     """
-
     title: str
     message: Optional[str]
     code: Optional[int]
@@ -20,16 +19,19 @@ class ResultDetail:
                  message: Optional[str] = None,
                  code: Optional[int] = None,
                  more_data: Optional[List[Any]] = None):
-        """ Initializes a new instance of the ResultDetail class.
+        """
+        Initializes a new instance of the ResultDetail class.
 
-        Args:
-            title (str): A title for the result detail.
-            message (str, optional): A message describing the result detail. Defaults to None.
-            code (int, optional): A code associated with the result detail. Defaults to None.
-            more_data (List[Any], optional): A list of additional data associated with the result detail. Defaults to an empty list.
+        :param title: The title of the error
+        :type title: str
+        :param message: The message to display to the user
+        :type message: Optional[str]
+        :param code: The status code
+        :type code: Optional[int]
+        :param more_data: This is a list of any data you want to pass along with the error
+        :type more_data: Optional[List[Any]]
 
-        Raises:
-            ValueError: If title is empty or None.
+        :raises ValueError: If title is empty or None.
         """
         if title is None or title == '':
             raise ValueError("title is required")
@@ -40,33 +42,31 @@ class ResultDetail:
             self.more_data = more_data
 
     def is_instance_of(self, cls):
-        """ Checks if the result detail is an instance of the given class.
+        """
+        The isinstance() function is used to determine whether an object is an instance of a class or a subclass
 
-        Args:
-            cls (type): A type to check against.
-
-        Returns:
-            bool: True if the result detail is an instance of the given class, False otherwise.
+        :param cls: The class to check against
+        :return: True or False
         """
         return isinstance(self, cls)
 
     def add_more_data(self, data: Any) -> None:
-        """ Adds more data to the result detail.
-
-        Args:
-            data (Any): Additional data to add to the result detail.
         """
+        Adds additional data to the result detail
 
+        :param data: The data to be added to the list
+        :type data: Any
+        :return: None.
+        """
         if data is None:
             return
         self.more_data = []
         self.more_data.append(data)
 
     def __str__(self):
-        """ Returns a string representation of the result detail.
-
-        Returns:
-            str: A string representation of the result detail.
+        """
+        The function returns a string that contains the title, message, and code of the exception
+        :return: str
         """
         result: str = f"Title: {self.title}\n"
 

@@ -4,7 +4,12 @@ from def_result.ResultDetails.Errors.InternalError import InternalError
 
 
 class ExceptionError(InternalError):
-    """ Represents an internal error caused by an exception. """
+    """
+    Represents an internal error caused by an exception. Default code is 500.
+
+    Inherits from InternalError class.
+    """
+
     def __init__(self, exception: Exception,
                  title: Optional[str] = "An exception occurred",
                  message: Optional[str] = None,

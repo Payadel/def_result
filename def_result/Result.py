@@ -22,38 +22,38 @@ class Result:
 
     @staticmethod
     def ok(value: Optional[Any] = None, detail: Optional[ResultDetail] = None):
-        """ Returns a successful result.
+        """
+        Returns a successful result.
 
-        Args:
-            value (Any, optional): The value of the result. Defaults to None.
-            detail (ResultDetail, optional): The details of the result. Defaults to None.
-
-        Returns:
-            Result: A successful result.
+        :param value: The value to return if the result is ok
+        :type value: Optional[Any]
+        :param detail: Optional[ResultDetail] = None
+        :type detail: Optional[ResultDetail]
+        :return: A successful Result with the value. The detail and value are optional.
         """
         return Result(True, detail=detail, value=value)
 
     @staticmethod
     def fail(detail: Optional[ResultDetail] = None):
-        """ Returns a failed result.
+        """
+        It returns a failed Result an optional detail
 
-        Args:
-            detail (ResultDetail, optional): The details of the result. Defaults to None.
-
-        Returns:
-            Result: A failed result.
+        :param detail: Optional[ResultDetail] = None
+        :type detail: Optional[ResultDetail]
+        :return: A failed Result object. The detail is optional.
         """
         return Result(False, detail)
 
     def code(self, default_success_code: int = 200, default_error_code: int = 500) -> int:
-        """ Returns the result code.
+        """
+        If the detail has a code, return that, otherwise return the default success code if the status is successful,
+        otherwise return the default error code
 
-        Args:
-            default_success_code (int, optional): The default success code. Defaults to 200.
-            default_error_code (int, optional): The default error code. Defaults to 500.
-
-        Returns:
-            int: The result code.
+        :param default_success_code: The default status code to return if the Result is successful, defaults to 200
+        :type default_success_code: int (optional)
+        :param default_error_code: The default error code to return if the Result is not successful, defaults to 500
+        :type default_error_code: int (optional)
+        :return: int
         """
         if self.detail and self.detail.code:
             return self.detail.code

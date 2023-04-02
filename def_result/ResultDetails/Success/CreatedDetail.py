@@ -4,7 +4,12 @@ from def_result.ResultDetails.SuccessDetail import SuccessDetail
 
 
 class CreatedDetail(SuccessDetail):
-    """ A new resource has been created """
+    """
+    A new resource has been created. Default code is 201.
+
+    Inherits from SuccessDetail class.
+    """
+
     def __init__(self, title: Optional[str] = "A new resource has been created",
                  message: Optional[str] = None,
                  code: Optional[int] = 201,

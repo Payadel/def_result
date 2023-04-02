@@ -5,10 +5,11 @@ from def_result.ResultDetails.ErrorDetail import ErrorDetail
 
 class NotFoundError(ErrorDetail):
     """
-    Stores the error details of a not found error.
+    Represent the error details of a not found error. Default code is 404.
 
     Inherits from ErrorDetail class.
     """
+
     def __init__(self, title: Optional[str] = "NotFound Error",
                  message: Optional[str] = None,
                  code: Optional[int] = 404,

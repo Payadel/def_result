@@ -5,11 +5,13 @@ from def_result.ResultDetails.ErrorDetail import ErrorDetail
 
 class ConflictError(ErrorDetail):
     """
-      Represents a conflict error.
+      Represents a conflict error. Default code is 409.
 
       This error occurs when an operation cannot be completed due to conflicting data.
 
+      Inherits from ErrorDetail class.
       """
+
     def __init__(self, title: Optional[str] = "Conflict Error",
                  message: Optional[str] = None,
                  code: Optional[int] = 409,

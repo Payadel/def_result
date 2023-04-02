@@ -5,10 +5,11 @@ from def_result.ResultDetails.ErrorDetail import ErrorDetail
 
 class BadRequestError(ErrorDetail):
     """
-    Represents a bad request error.
+    Represents a bad request error. Default code is 400.
 
     This error occurs when the request is invalid or improperly formatted.
 
+    Inherits from ErrorDetail class.
     """
 
     def __init__(self, title: Optional[str] = "BadRequest Error",
