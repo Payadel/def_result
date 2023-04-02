@@ -61,7 +61,7 @@ class Result:
 
     def __str__(self) -> str:
         result = f"success: {self.success}\n"
-        if self.success:
+        if self.value:
             result += f"Value: {self.value}\n"
         if self.detail:
             result += f"Detail:\n{self.detail}\n"
