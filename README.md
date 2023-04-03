@@ -1,6 +1,18 @@
 <div align="center">
   <h1>def_result</h1>
   <br />
+
+## Project Discontinuation Announcement
+
+`def_result` will not be developed anymore.
+
+Please use **[on_rails](https://github.com/Payadel/on_rails/)** library.
+
+The **[on_rails](https://github.com/Payadel/on_rails/)** project is better and more complete than this project. In
+addition to the features of this project, it has tools for railway oriented programming (ROP).
+  <br />
+  <br />
+
   <a href="#getting-started"><strong>Getting Started »</strong></a>
   <br />
   <br />
@@ -22,16 +34,6 @@
 
 ![GitHub](https://img.shields.io/github/license/Payadel/def_result)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/Payadel/def_result/issues?q=is%3Aissue+is%3Aopen)
-
-## Project Discontinuation Announcement
-
-`def_result` will not be developed anymore.
-
-Please use **[on_rails](https://github.com/Payadel/on_rails/)** library.
-
-The **[on_rails](https://github.com/Payadel/on_rails/)** project is better and more complete than this project. In
-addition to the features of this project, it has tools for railway oriented programming (ROP).
-<br />
 
 </div>
 <details>
