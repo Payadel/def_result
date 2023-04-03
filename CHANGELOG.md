@@ -1,7 +1,24 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.0.1](https://github.com/Payadel/def_result/compare/v1.0.0...v1.0.1) (2023-04-03)
+
+## Project Discontinuation Announcement
+
+The project will not be developed anymore.
+
+### Documents
+
+* use absolute links to fix links in package readme file ([161d82f](https://github.com/Payadel/def_result/commit/161d82f892b273ea4771eaae385ef6ccdc57ce89))
+* update readme
+
+
+### Development: CI/CD, Build, etc
+
+* **deps:** bump actions/github-script from 5 to 6 ([bd5007e](https://github.com/Payadel/def_result/commit/bd5007eca39afd095a49e7989fd047bfb4a80b3a))
+* **coverage:** fix coverage action ([c538b61](https://github.com/Payadel/def_result/commit/c538b61d2c49673564bb2f218ee6ad1d195c3691))
+* **coverage:** fix coverage action ([ff03f77](https://github.com/Payadel/def_result/commit/ff03f7791cc67b651602da085ef44f38a746bddf))
 
 ## [1.0.0](https://github.com/Payadel/def_result/compare/v0.0.3...v1.0.0) (2023-04-02)
 

@@ -36,7 +36,7 @@ jobs:
 
     - name: Read Report
       id: report
-      uses: actions/github-script@v5
+      uses: actions/github-script@v6
       with:
         script: |
           const fs = require('fs');
@@ -45,7 +45,7 @@ jobs:
 
     - name: Read Latest Tag
       id: latest-tag
-      uses: actions/github-script@v5
+      uses: actions/github-script@v6
       with:
         script: |
           await exec.getExecOutput("git fetch --tags")
