@@ -23,7 +23,11 @@
 ![GitHub](https://img.shields.io/github/license/Payadel/def_result)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/Payadel/def_result/issues?q=is%3Aissue+is%3Aopen)
 
-
+> **`def_result` project is no longer developed.**
+>
+> Please use **[on_rails](https://github.com/Payadel/on_rails/)** library.
+> 
+> The `on_rails` project is better and more complete than this project. In addition to the features of this project, it has tools for railway oriented programming (ROP).
 
 </div>
 <details>
