@@ -1,7 +1,24 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.0.1](https://github.com/Payadel/def_result/compare/v1.0.0...v1.0.1) (2023-04-03)
+
+
+### Documents
+
+* update readme ([a83557b](https://github.com/Payadel/def_result/commit/a83557b0a825f90bf58bba4cc1b31fb5bb7ee47a))
+* update readme ([88a0d1e](https://github.com/Payadel/def_result/commit/88a0d1e043ff9e9f42ab8988141d93c04ca73112))
+* update readme ([ab6d7f7](https://github.com/Payadel/def_result/commit/ab6d7f7c4d6c80027239839c7ab98bafdae1d6ab))
+* update readme ([275574d](https://github.com/Payadel/def_result/commit/275574d4ad6b16d6510313091ef4b78a267956d2))
+* use absolute links to fix links in package readme file ([161d82f](https://github.com/Payadel/def_result/commit/161d82f892b273ea4771eaae385ef6ccdc57ce89))
+
+
+### Development: CI/CD, Build, etc
+
+* **coverage:** fix coverage action ([c538b61](https://github.com/Payadel/def_result/commit/c538b61d2c49673564bb2f218ee6ad1d195c3691))
+* **coverage:** fix coverage action ([ff03f77](https://github.com/Payadel/def_result/commit/ff03f7791cc67b651602da085ef44f38a746bddf))
+* **deps:** bump actions/github-script from 5 to 6 ([bd5007e](https://github.com/Payadel/def_result/commit/bd5007eca39afd095a49e7989fd047bfb4a80b3a))
 
 ## [1.0.0](https://github.com/Payadel/def_result/compare/v0.0.3...v1.0.0) (2023-04-02)
 
