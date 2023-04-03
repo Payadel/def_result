@@ -23,11 +23,15 @@
 ![GitHub](https://img.shields.io/github/license/Payadel/def_result)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/Payadel/def_result/issues?q=is%3Aissue+is%3Aopen)
 
-> **`def_result` project is no longer developed.**
->
-> Please use **[on_rails](https://github.com/Payadel/on_rails/)** library.
-> 
-> The `on_rails` project is better and more complete than this project. In addition to the features of this project, it has tools for railway oriented programming (ROP).
+## Project Discontinuation Announcement
+
+`def_result` will not be developed anymore.
+
+Please use **[on_rails](https://github.com/Payadel/on_rails/)** library.
+
+The **[on_rails](https://github.com/Payadel/on_rails/)** project is better and more complete than this project. In
+addition to the features of this project, it has tools for railway oriented programming (ROP).
+<br />
 
 </div>
 <details>
@@ -50,6 +54,7 @@
 - [Authors & contributors](#authors--contributors)
 - [Security](#security)
 - [License](#license)
+
 </details>
 
 ## About
@@ -58,18 +63,20 @@
 
 It is a library for functional error handling to improve **managing errors**.
 
-It stores result of functions and provides a simple way to handle and manipulate the return values of functions, with built-in support for error
-handling and more.
+It stores result of functions and provides a simple way to handle and manipulate the return values of functions, with
+built-in support for error handling and more.
 
 ### Purpose
 
-In functional programming, it is not always appropriate to use traditional `try-except` blocks because they can lead to code
-that is difficult to read, understand, and maintain.
+In functional programming, it is not always appropriate to use traditional `try-except` blocks because they can lead to
+code that is difficult to read, understand, and maintain.
 
 The purpose of Functional Error Handling Libraries is to provide developers with a set of abstractions and tools for
 managing errors in a functional way.
 
-`def_result` is a functional error handling library. The goal of this library is to make error handling m**ore explicit, composable, and testable**. By using this library, developers can write code that is **more robust, maintainable, and expressive**.
+`def_result` is a functional error handling library. The goal of this library is to make error handling m**ore explicit,
+composable, and testable**. By using this library, developers can write code that is **more robust, maintainable, and
+expressive**.
 
 ### Motivation
 
@@ -87,10 +94,9 @@ This library can solve several problems, including:
 - Making error handling code more readable and maintainable.
 - Encouraging developers to handle errors in a more functional way, which can lead to more reliable and robust code.
 
-Developers
-can spend less time debugging and more time writing code that adds value to their organization. Additionally, by using
-functional programming concepts, developers can write code that is easier to reason about and understand, which can lead
-to faster development cycles and better quality code.
+Developers can spend less time debugging and more time writing code that adds value to their organization. Additionally,
+by using functional programming concepts, developers can write code that is easier to reason about and understand, which
+can lead to faster development cycles and better quality code.
 
 ## Getting Started
 
@@ -154,10 +160,18 @@ Please see the [CHANGELOG](https://github.com/Payadel/def_result/blob/main/CHANG
 
 - **Easy to use:** `def_result` is designed to be simple and easy to use, with a minimal API and clear documentation.
 - **Compatibility with existing code:** `def_result` can be easily added to existing codes without the need for major
-  refactoring. You can use decorator for wrap old functions or write new functions without worrying about incompatibilities.
-- **Save any details you like:** Thanks to the [ResultDetail](https://github.com/Payadel/def_result/blob/main/def_result/ResultDetail.py) class, you can store various information about the output of the function. Also, by inheriting from this class, you can write new and customized classes for your project.
-- **Special details for errors:** With the [ErrorDetail](https://github.com/Payadel/def_result/blob/main/def_result/ResultDetails/ErrorDetail.py) class, you can store specific details about errors. For example, this class supports **stack trace** in a built-in way.
-- **Support for common details by default:** In [this link](https://github.com/Payadel/def_result/tree/main/def_result/ResultDetails), you can see the different types of details that are supported.
+  refactoring. You can use decorator for wrap old functions or write new functions without worrying about
+  incompatibilities.
+- **Save any details you like:** Thanks to
+  the [ResultDetail](https://github.com/Payadel/def_result/blob/main/def_result/ResultDetail.py) class, you can store
+  various information about the output of the function. Also, by inheriting from this class, you can write new and
+  customized classes for your project.
+- **Special details for errors:** With
+  the [ErrorDetail](https://github.com/Payadel/def_result/blob/main/def_result/ResultDetails/ErrorDetail.py) class, you
+  can store specific details about errors. For example, this class supports **stack trace** in a built-in way.
+- **Support for common details by default:**
+  In [this link](https://github.com/Payadel/def_result/tree/main/def_result/ResultDetails), you can see the different
+  types of details that are supported.
 
 ## Roadmap
 
@@ -181,11 +195,13 @@ Reach out to the maintainers at one of the following places:
 
 **not necessarily.** You can add this library and write new functions without changing the previous codes.
 
-Also for old functions, you can use **decorator**. By using decorator, The output of the function is converted to `Result` format. This way, your code is wrap in a `try-except` block to handle all exceptions.
+Also for old functions, you can use **decorator**. By using decorator, The output of the function is converted
+to `Result` format. This way, your code is wrap in a `try-except` block to handle all exceptions.
 
 #### How to manage all function exceptions?
 
-By using decorator, your code is wrap in a `try-except` block and the final output is converted to Result. In this way, all exceptions are handled.
+By using decorator, your code is wrap in a `try-except` block and the final output is converted to Result. In this way,
+all exceptions are handled.
 
 ## Project assistance
 
@@ -205,10 +221,12 @@ First off, thanks for taking the time to contribute! Contributions are what make
 amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly
 appreciated**.
 
-Please read [our contribution guidelines](https://github.com/Payadel/def_result/blob/main/docs/CONTRIBUTING.md), and thank you for being involved!
+Please read [our contribution guidelines](https://github.com/Payadel/def_result/blob/main/docs/CONTRIBUTING.md), and
+thank you for being involved!
 
-Please do not forget that this project uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
-You can see valid types from [this file](https://github.com/Payadel/def_result/blob/main/.configs/commitlint.config.js).
+Please do not forget that this project uses [conventional commits](https://www.conventionalcommits.org), so please
+follow the specification in your commit messages. You can see valid types
+from [this file](https://github.com/Payadel/def_result/blob/main/.configs/commitlint.config.js).
 
 ## Authors & contributors
 
@@ -222,7 +240,8 @@ see [the contributors page](https://github.com/Payadel/def_result/contributors).
 `def_result` follows good practices of security, but 100% security cannot be assured. `def_result` is provided **"as
 is"** without any **warranty**.
 
-_For more information and to report security issues, please refer to our [security documentation](https://github.com/Payadel/def_result/blob/main/docs/SECURITY.md)._
+_For more information and to report security issues, please refer to
+our [security documentation](https://github.com/Payadel/def_result/blob/main/docs/SECURITY.md)._
 
 ## License
 
