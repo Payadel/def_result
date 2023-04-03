@@ -204,7 +204,7 @@ appreciated**.
 Please read [our contribution guidelines](https://github.com/Payadel/def_result/blob/main/docs/CONTRIBUTING.md), and thank you for being involved!
 
 Please do not forget that this project uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
-You can see valid types from [this file](.versionrc.json).
+You can see valid types from [this file](https://github.com/Payadel/def_result/blob/main/.configs/commitlint.config.js).
 
 ## Authors & contributors
 
