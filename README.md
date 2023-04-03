@@ -10,6 +10,8 @@ Please use **[on_rails](https://github.com/Payadel/on_rails/)** library.
 
 The **[on_rails](https://github.com/Payadel/on_rails/)** project is better and more complete than this project. In
 addition to the features of this project, it has tools for railway oriented programming (ROP).
+
+Thank you
   <br />
   <br />
 
